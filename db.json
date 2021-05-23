@@ -1,0 +1,66 @@
+{
+  "products": 
+    [
+      {
+        "id": "1",
+        "name": "Orange",
+        "description": "The orange has a sweet-tart taste and is commonly peeled and eaten fresh, or squeezed for its juice. It has a thick, bitter rind that is usually discarded, but can be used in cooking",
+        "category": [
+          {
+            "general": "Common Fruit"
+          },
+          {
+            "family": "Rutaceace"
+          }
+        ],
+        "price": "4.71",
+        "quantity": "1"
+      },
+      {
+        "id": "2",
+        "name": "Apple",
+        "description": "The apple is a pome (fleshy) fruit, in which the ripened ovary and surrounding tissue both become fleshy and edible.",
+        "category": [
+          {
+            "general": "Common Fruit"
+          },
+          {
+            "family": "Pomaceae"
+          }
+        ],
+        "price": "2.37",
+        "quantity": "1"
+      },
+      {
+        "id": "3",
+        "name": "Pear",
+        "description": "Pear fruits are generally sweeter and of softer texture than apples and are distinguished by the presence of hard cells in the flesh",
+        "category": [
+          {
+            "general": "Common Fruit"
+          },
+          {
+            "family": "Rosaceae"
+          }
+        ],
+        "price": "3.01",
+        "quantity": "1"
+      },
+      {
+        "id": "4",
+        "name": "Banana",
+        "description": "The banana is a lengthy yellow fruit, found in the market in groups of three to twenty fruits, similar to a triangular cucumber, oblong and normally yellow. Its flavour is more or less sweet, depending on the variety.",
+        "category": [
+          {
+            "general": "Tropical Fruit"
+          },
+          {
+            "family": "Musaceae"
+          }
+        ],
+        "price": "5.81",
+        "quantity": "1"
+      }
+    ]
+}
+
