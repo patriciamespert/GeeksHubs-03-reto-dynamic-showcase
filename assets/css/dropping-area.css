@@ -1,11 +1,23 @@
-body {
-    font-family: sans-serif;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
+
+  body {
+    background: #E3E5EB;
+      font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   a {
     color: #369;
   }
   .note {
-    width: 500px;
+    width: 100%;
     margin: 50px auto;
     font-size: 1.1em;
     color: #333;
