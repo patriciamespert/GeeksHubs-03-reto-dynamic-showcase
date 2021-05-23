@@ -14,7 +14,8 @@
           }
         ],
         "price": "4.71",
-        "quantity": "1"
+        "quantity": "1",
+        "img":"./assets/img/orange.png"
       },
       {
         "id": "2",
@@ -29,7 +30,8 @@
           }
         ],
         "price": "2.37",
-        "quantity": "1"
+        "quantity": "1",
+        "img":"./assets/img/apple.png"
       },
       {
         "id": "3",
@@ -44,7 +46,8 @@
           }
         ],
         "price": "3.01",
-        "quantity": "1"
+        "quantity": "1",
+        "img":"./assets/img/pear.png"
       },
       {
         "id": "4",
@@ -59,7 +62,8 @@
           }
         ],
         "price": "5.81",
-        "quantity": "1"
+        "quantity": "1",
+        "img":"./assets/img/banana.png"
       }
     ]
 }

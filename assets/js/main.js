@@ -1,27 +1,33 @@
 //AXIOS
 const renderProducts = products => {
     for(const product of products){
-        document.querySelector('main.products').innerHTML += `
+        document.querySelector('div.products').innerHTML += `
 
-        <div class="product">           
-            <table>
-                <thead>
-                    <th> Product </th>
-                    <th> Category </th>
-                    <th> Price </th>
-                    <th> Quantity </th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> ${product.name} </td>
-                        <td> ${product.category[0].general} </td>
-                        <td> ${product.price} </td>
-                        <td> ${product.quantity} </td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </div>
+            <div class="product">   
+                <div class="picture">
+                    <div>
+                       <img src="${product.img}" alt="${product.name}  - ${product.id}">
+                    </div>
+                </div>
+                <div class="item">
+                    <div>
+                        <p class="label"> PRODUCT </p>
+                        <p class="data">${product.name}</p>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <div>
+                        <p class="label"> QUANTITY </p>
+                        <p class="data">${product.quantity}</p>
+                    </div>
+                </div>
+                <div class="price">
+                    <div>
+                        <p class="label"> PRICE </p>
+                        <p class="data">${product.price}</p>
+                    </div>
+                </div>        
+            </div>
         
         `
     }
@@ -38,7 +44,6 @@ const getProducts = async() =>{
     }
     
 }
-
 
 
 
