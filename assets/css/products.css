@@ -8,7 +8,6 @@ body {
 	background: #E3E5EB;
     font-family: 'Open Sans', sans-serif;
 	min-height: 100vh;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -24,7 +23,7 @@ body {
 	border-radius: 10px;
 }
 
-.products-container  h1 {
+.products-container  h1, .products-container .total-price {
 	text-transform: uppercase;
 	font-size: 20px;
 	background: #fff;
@@ -41,7 +40,12 @@ body {
 	width: 100%;
 }
 
-.products .product {
+.dropped-products {
+	padding: 40px;
+	width: 100%;
+}
+
+.products .product, .dropped-products .product, .total .product {
 	background: #fff;
 	display: grid;
 	grid-template-columns: auto 1fr 1fr 1fr;
@@ -49,18 +53,47 @@ body {
 	padding: 8px;
 	border-radius: 10px;
 	margin-bottom: 20px;
+	cursor: move;
 	
 }
 
 
-.product .label {
+.products .dropped-products {
+	background: #fff;
+	grid-template-columns: auto 1fr 1fr 1fr;
+	align-items: center;
+	padding: 8px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	cursor: move;
+	overflow: scroll;
+	
+}
+
+.products .product.selected {
+	transform: scale(1.02) rotate(-1deg);
+	box-shadow: 0px 0px 20px rgba(149, 153, 159, .16);
+	
+}
+
+.products .product.ghost {
+	border: 2px dotted #000;	
+}
+
+.products .product.drag {
+	opacity: 0;
+}
+
+
+
+.product .label, .item .label{
 	text-transform: uppercase;
 	font-weight: 600;
 	margin-bottom: 5px;
 	color: #5173CF;
 }
 
-.product .data {
+.product .data, .item .label{
 	font-weight: bold;
 	font-size: 20px;
 }
@@ -71,7 +104,7 @@ body {
 	margin-right: 40px;
 }
 
-div.products > p {
+.caption {
     text-align:center; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     font-size: x-large;

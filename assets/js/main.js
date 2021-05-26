@@ -2,8 +2,7 @@
 const renderProducts = products => {
     for(const product of products){
         document.querySelector('div.products').innerHTML += `
-
-            <div class="product">   
+            <div draggable="true" id="${product.id}" class="product draggable">
                 <div class="picture">
                     <div>
                        <img src="${product.img}" alt="${product.name}  - ${product.id}">
@@ -24,13 +23,12 @@ const renderProducts = products => {
                 <div class="price">
                     <div>
                         <p class="label"> PRICE </p>
-                        <p class="data">${product.price}</p>
+                        <p class="data data_price">${product.price}</p>
                     </div>
                 </div>        
             </div>
-        
         `
-    }
+    }    
 }
 
 const getProducts = async() =>{
@@ -41,9 +39,10 @@ const getProducts = async() =>{
     
     }catch(error){
         
-    }
-    
+    }  
 }
+
+
 
 
 
