@@ -17,7 +17,9 @@ Source code for GeeksHubs Academy Bootcamp Frontend Angular third challenge abou
 
 ### Executing program
 
-* I recommend using VS CODE live server extension in order to run this project serverless otherwise you can double click index.html
+* I recommend opening this proyect with vs code integrated terminal, also you have to
+execute this command (within the root of the project)--> json-server --watch db.json
+* Then you have to open index.html file with google chrome or other web explorer
 
 
 ## Authors
