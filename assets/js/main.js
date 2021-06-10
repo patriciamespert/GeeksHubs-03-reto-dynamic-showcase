@@ -1,3 +1,7 @@
+window.onload = () => {
+    getProducts();
+};
+
 //AXIOS
 const renderProducts = products => {
     for(const product of products){

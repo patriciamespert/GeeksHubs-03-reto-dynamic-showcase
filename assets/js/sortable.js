@@ -11,6 +11,28 @@ draggingArea.addEventListener('dragstart',(e) =>{
     droppingProducts(e.target.id);  
 })
 
+draggingArea.addEventListener('dragend',(e) =>{
+     const btn = document.createElement('BUTTON');
+     const t = document.createTextNode("Reset");
+
+     btn.setAttribute("id","button-to-reset");
+     btn.setAttribute("class","btn btn-primary");
+
+     btn.appendChild(t);
+     pricingArea.hasChildNodes() ? console.log('has') :pricingArea.appendChild(btn);
+
+     btn.addEventListener('click',()=>{
+        reset();
+     })
+})
+
+
+
+
+
+
+
+
 const droppingProducts = id =>{
     
     const product = document.getElementById(id)
@@ -40,7 +62,6 @@ const addingProducts = (id,count)=>{
      const prc = draggingArea.querySelector('div.product > div.price > div> .data').innerText;
 
      droppingArea.children[id=id].querySelector('div.price > div> .data').innerText=prc*count;
-
 }
 
 
@@ -53,8 +74,17 @@ const noRepeat = (id) => {
 
 }
 
+const reset = () =>{
 
+        
+    let child = droppingArea.lastElementChild; 
+    while (child) {
+        droppingArea.removeChild(child);
+        child = droppingArea.lastElementChild;
+    }
 
+    window.location.href = window.location.href;
+}
 
 
     
