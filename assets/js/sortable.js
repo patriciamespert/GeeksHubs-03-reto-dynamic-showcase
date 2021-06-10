@@ -1,6 +1,9 @@
 const draggingArea = document.querySelector('.products');
 const droppingArea = document.querySelector('.dropped-products');
 const pricingArea = document.querySelector('.total');
+const buttonDelete = document.getElementById('button-to-reset');
+
+
 let prices = new Array();
 let prcs = new Array();
 let droppingIdentifiers = new Array();
@@ -12,22 +15,21 @@ draggingArea.addEventListener('dragstart',(e) =>{
 })
 
 draggingArea.addEventListener('dragend',(e) =>{
-     const btn = document.createElement('BUTTON');
-     const t = document.createTextNode("Reset");
-
-     btn.setAttribute("id","button-to-reset");
-     btn.setAttribute("class","btn btn-primary");
-
-     btn.appendChild(t);
-     pricingArea.hasChildNodes() ? console.log('has') :pricingArea.appendChild(btn);
-
-     btn.addEventListener('click',()=>{
+    buttonDelete.addEventListener('click',()=>{
         reset();
      })
 })
 
 
+const deleteElements = (e) =>{
 
+
+    let child = document.getElementById('product'+e)
+    while (child) {
+        droppingArea.removeChild(child);
+    }
+
+}
 
 
 

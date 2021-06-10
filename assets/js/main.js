@@ -29,7 +29,7 @@ const renderProducts = products => {
                         <p class="label"> PRICE </p>
                         <p class="data data_price">${product.price}</p>
                     </div>
-                </div>        
+                </div>   
             </div>
         `
     }    
